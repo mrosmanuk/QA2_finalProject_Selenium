@@ -66,7 +66,6 @@ public class Runner {
 
         user.setCheckoutUserData(orderpage.getElements());
         System.out.println(Arrays.toString(user.getCheckoutUserData()));
-        System.out.println(user.getCheckoutUserData()[1]);
 
     }
 

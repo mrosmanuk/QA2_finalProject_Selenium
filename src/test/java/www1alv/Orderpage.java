@@ -85,8 +85,6 @@ public class Orderpage extends Common {
     }
 
     public String[] getElements(){
-        return driver.findElement(By.xpath("//*[@id=\"main\"]/div/div/form/div[2]/div/div[1]/p")).getText().split("\\n|\\b");
+        return driver.findElement(By.xpath("//*[@id=\"main\"]/div/div/form/div[2]/div/div[1]")).getText().split("");
     }
-
-
 }

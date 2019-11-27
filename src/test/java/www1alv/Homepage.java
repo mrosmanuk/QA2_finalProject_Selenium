@@ -41,6 +41,9 @@ public class Homepage extends Common{
     }
 
     public void sortByStars() throws InterruptedException {
+        WebElement element = driver.findElement(sortBySelector);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        Thread.sleep(500);
         driver.findElement(sortBySelector).click();
         driver.findElement(sortByStars).click();
         Thread.sleep(3000);
