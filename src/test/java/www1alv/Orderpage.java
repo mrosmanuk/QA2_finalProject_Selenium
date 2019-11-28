@@ -1,10 +1,6 @@
 package www1alv;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Orderpage extends Common {
 
@@ -85,6 +81,6 @@ public class Orderpage extends Common {
     }
 
     public String[] getElements(){
-        return driver.findElement(By.xpath("//*[@id=\"main\"]/div/div/form/div[2]/div/div[1]")).getText().split("");
+        return driver.findElement(By.xpath("//*[@id=\"main\"]/div/div/form/div[2]/div/div[1]")).getText().split("[^\\S]+");
     }
 }

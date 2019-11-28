@@ -4,9 +4,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertFalse;
-import static org.testng.Assert.assertTrue;
 import org.testng.asserts.SoftAssert;
 
 import java.util.Arrays;
@@ -25,7 +22,7 @@ public class Runner {
     public void beforeProcess() throws InterruptedException {
         homepage.startBrowser();
         homepage.startWebsite();
-        homepage.closeBottomBanner();
+        //homepage.closeBottomBanner();
         homepage.acceptCookies();
     }
 
@@ -67,6 +64,10 @@ public class Runner {
         user.setCheckoutUserData(orderpage.getElements());
         System.out.println(Arrays.toString(user.getCheckoutUserData()));
 
+        softAssert.assertEquals(user.getUserName(),user.getCheckoutUserData()[1]);
+        softAssert.assertEquals(user.getUserLastname(),user.getCheckoutUserData()[2]);
+        softAssert.assertEquals(user.getEmail(),user.getCheckoutUserData()[3]);
+        softAssert.assertEquals(user.getPhoneNumber(),user.getCheckoutUserData()[4]);
     }
 
     @After

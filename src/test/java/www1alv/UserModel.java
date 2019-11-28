@@ -1,9 +1,5 @@
 package www1alv;
 
-import org.openqa.selenium.WebElement;
-
-import java.util.List;
-
 public class UserModel {
     private String userName;
     private String userLastName;

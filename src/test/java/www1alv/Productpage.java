@@ -24,5 +24,4 @@ public class Productpage extends Common{
     public void navigateToCart(){
         driver.findElement(cartLink).click();
     }
-
 }
