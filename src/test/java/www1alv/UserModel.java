@@ -1,49 +1,49 @@
 package www1alv;
 
-public class UserModel {
+class UserModel {
     private String userName;
     private String userLastName;
     private String email;
     private String phoneNumber;
     private String[] checkoutUserData;
 
-    public String getUserName() {
+    String getUserName() {
         return userName;
     }
 
-    public void setUserName(String userName) {
+    void setUserName(String userName) {
         this.userName = userName;
     }
 
-    public String getUserLastname() {
+    String getUserLastname() {
         return userLastName;
     }
 
-    public void setUserLastname(String userLastname) {
+    void setUserLastname(String userLastname) {
         this.userLastName = userLastname;
     }
 
-    public String getEmail() {
+    String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    void setEmail(String email) {
         this.email = email;
     }
 
-    public String getPhoneNumber() {
+    String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
+    void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
-    public String[] getCheckoutUserData() {
+    String[] getCheckoutUserData() {
         return checkoutUserData;
     }
 
-    public void setCheckoutUserData(String[] checkoutUserData) {
+    void setCheckoutUserData(String[] checkoutUserData) {
         this.checkoutUserData = checkoutUserData;
     }
 }

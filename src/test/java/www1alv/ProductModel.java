@@ -1,22 +1,22 @@
 package www1alv;
 
-public class ProductModel {
+class ProductModel {
     private String productName;
     private String productPrice;
 
-    public String getProductName() {
+    String getProductName() {
         return productName;
     }
 
-    public void setProductName(String productName) {
+    void setProductName(String productName) {
         this.productName = productName;
     }
 
-    public String getProductPrice() {
+    String getProductPrice() {
         return productPrice;
     }
 
-    public void setProductPrice(String productPrice) {
+    void setProductPrice(String productPrice) {
         this.productPrice = productPrice;
     }
 }

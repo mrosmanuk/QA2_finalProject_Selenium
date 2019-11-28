@@ -2,26 +2,27 @@ package www1alv;
 
 import org.openqa.selenium.By;
 
-public class Productpage extends Common{
+class Productpage extends Common{
 
     private By price = By.xpath("//div[@data-sell-price-w-vat]");
-    private By productName = By.xpath("//*[@id=\"product-view-container\"]/div[1]/div[1]/header/div[2]/h1");
-    private By placeToCart = By.xpath("//*[@id=\"add_product_to_shopping_cart_button_top\"]");
-    private By cartLink = By.xpath("//*[@id=\"shopping_cart_container\"]/a");
+    private By productName = By.xpath("//div[@class='product-main-info']/h1"); // //*[@id="product-view-container"]/div[1]/div[1]/header/div[2]/h1
+    private By placeToCart = By.xpath("//*[@id='add_product_to_shopping_cart_button_top']");
+    private By cartLink = By.xpath("//*[@id='shopping_cart_container']/a");
 
-    public String productPrice(){
+    String productPrice(){
         return driver.findElement(price).getAttribute("data-sell-price-w-vat");
     }
 
-    public String productName(){
+    String productName(){
         return driver.findElement(productName).getText();
     }
 
-    public void placeProductToCart(){
+    void placeProductToCart() throws InterruptedException{
         driver.findElement(placeToCart).click();
+        Thread.sleep(3000);
     }
 
-    public void navigateToCart(){
+    void navigateToCart(){
         driver.findElement(cartLink).click();
     }
 }
