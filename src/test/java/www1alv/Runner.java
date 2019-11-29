@@ -21,6 +21,7 @@ public class Runner {
     public void beforeProcess() throws InterruptedException {
         homepage.startBrowser();
         homepage.startWebsite();
+        homepage.closeFullscreenBanner();
         homepage.closeBottomBanner();
         homepage.acceptCookies();
     }
