@@ -2,14 +2,15 @@ package www1alv;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 class Homepage extends Common{
 
     private By fullScreenBanner = By.xpath("/html/body/div[1]/div/div/a");
-    private By getFullScreenBannerFrame = By.xpath("//*[@id=\"mt-2b89d08afae5af31\"]");
+    private By getFullScreenBannerFrame = By.xpath("//*[@id=\"mt-65cf2a318dbd5e21\"]");
     private By advSlider = By.xpath("//div[@class='close-button-slider desktop']");// //*[@id="promo-bar"]/div/div[2]
-    private By advSliderFrame = By.xpath("//*[@id=\"mt-f352938a75c64630\"]");
+    private By advSliderFrame = By.xpath("//*[@id=\"mt-0e985ab86eaea08c\"]");
     private By cookieButton = By.xpath("//a[@class='c-button-inverse']");// //*[@id="cookie-btns"]/a[1]
     private By phoneCategory = By.xpath("//a[contains(@href,'telefoni_plansetdatori')]");// //*[@id="sidebar"]/ul/li[1]/a
     private By xiaomi = By.xpath("//a[contains(@href,'xiaomi/opened')]");// //*[@id="main"]/div/div/div[2]/div/div[2]/table/tbody/tr[1]/td[1]/a
@@ -23,17 +24,23 @@ class Homepage extends Common{
 
     void closeFullscreenBanner() throws InterruptedException {
         Thread.sleep(4000);
-        if(driver.findElement(getFullScreenBannerFrame).isDisplayed()){
-            driver.switchTo().frame("mt-2b89d08afae5af31");
-            driver.findElement(fullScreenBanner).click();
-        }}
+        try{
+            if(driver.findElement(getFullScreenBannerFrame).isDisplayed()){
+            driver.switchTo().frame("mt-65cf2a318dbd5e21");
+            driver.findElement(fullScreenBanner).click();}
+        else{
+                System.out.println("fullscreen frame not found");}}
+         catch(Exception e){}}
 
     void closeBottomBanner() throws InterruptedException {
         Thread.sleep(4000);
-        if(driver.findElement(advSliderFrame).isDisplayed()){
+        try{
+            if(driver.findElement(advSliderFrame).isDisplayed()){
             driver.switchTo().frame("mt-0e985ab86eaea08c");
-            driver.findElement(advSlider).click();
-        }}
+            driver.findElement(advSlider).click();}
+        else{
+                System.out.println("bottom slider not found");}}
+        catch(Exception e){}}
 
     void acceptCookies() throws InterruptedException{
         Thread.sleep(2000);

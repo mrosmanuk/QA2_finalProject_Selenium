@@ -18,7 +18,13 @@ public class Runner {
     private SoftAssert softAssert = new SoftAssert();
 
     @Before
-    public void beforeProcess() throws InterruptedException {
+    public void beforeProcess() throws InterruptedException{
+        //set user data
+        user.setUserName("Name");
+        user.setUserLastname("Lastname");
+        user.setPhoneNumber("+37120000000");
+        user.setEmail("tester@tester.elv");
+
         homepage.startBrowser();
         homepage.startWebsite();
         homepage.closeFullscreenBanner();
@@ -28,17 +34,14 @@ public class Runner {
 
     @Test
     public void testProcess() throws InterruptedException{
-        //set user data
-        user.setUserName("Name");
-        user.setUserLastname("Lastname");
-        user.setPhoneNumber("+37120000000");
-        user.setEmail("tester@tester.lv");
-
         //navigate and open product page
         homepage.navigateToPhone();
+        homepage.closeFullscreenBanner();
         homepage.navigateToBrand();
+        homepage.closeFullscreenBanner();
         homepage.sortByStars();
         homepage.selectProduct();
+        homepage.closeFullscreenBanner();
 
         //set and sout acquired price
         product.setProductPrice(productpage.productPrice());
