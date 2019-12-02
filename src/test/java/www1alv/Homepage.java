@@ -31,7 +31,7 @@ class Homepage extends Common{
     void closeBottomBanner() throws InterruptedException {
         Thread.sleep(4000);
         if(driver.findElement(advSliderFrame).isDisplayed()){
-            driver.switchTo().frame("mt-f352938a75c64630");
+            driver.switchTo().frame("mt-0e985ab86eaea08c");
             driver.findElement(advSlider).click();
         }}
 
