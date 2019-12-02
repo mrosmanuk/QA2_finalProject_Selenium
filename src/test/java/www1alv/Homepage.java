@@ -36,7 +36,7 @@ class Homepage extends Common{
     void closeBottomBanner() throws InterruptedException {
         Thread.sleep(3000);
         try {
-            driver.switchTo().frame("mt-f352938a75c64630");
+            driver.switchTo().frame("mt-0e985ab86eaea08c");
             List<WebElement> elementSliderBanner = driver.findElements(advSlider);
             if (elementSliderBanner.size() > 0) {
                 elementSliderBanner.get(0).click();
