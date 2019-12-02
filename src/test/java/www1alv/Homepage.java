@@ -3,13 +3,13 @@ package www1alv;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import java.util.List;
-import java.util.NoSuchElementException;
 
 class Homepage extends Common{
 
     private By fullScreenBanner = By.xpath("/html/body/div[1]/div/div/a");
+    private By getFullScreenBannerFrame = By.xpath("//*[@id=\"mt-2b89d08afae5af31\"]");
     private By advSlider = By.xpath("//div[@class='close-button-slider desktop']");// //*[@id="promo-bar"]/div/div[2]
+    private By advSliderFrame = By.xpath("//*[@id=\"mt-f352938a75c64630\"]");
     private By cookieButton = By.xpath("//a[@class='c-button-inverse']");// //*[@id="cookie-btns"]/a[1]
     private By phoneCategory = By.xpath("//a[contains(@href,'telefoni_plansetdatori')]");// //*[@id="sidebar"]/ul/li[1]/a
     private By xiaomi = By.xpath("//a[contains(@href,'xiaomi/opened')]");// //*[@id="main"]/div/div/div[2]/div/div[2]/table/tbody/tr[1]/td[1]/a
@@ -23,28 +23,17 @@ class Homepage extends Common{
 
     void closeFullscreenBanner() throws InterruptedException {
         Thread.sleep(4000);
-        try {
+        if(driver.findElement(getFullScreenBannerFrame).isDisplayed()){
             driver.switchTo().frame("mt-2b89d08afae5af31");
-            List<WebElement> elementFullScreenBanner = driver.findElements(fullScreenBanner);
-            if (elementFullScreenBanner.size() > 0) {
-                elementFullScreenBanner.get(0).click();
-            }
-        } catch (NoSuchElementException e) {
-        }
-    }
+            driver.findElement(fullScreenBanner).click();
+        }}
 
     void closeBottomBanner() throws InterruptedException {
-        Thread.sleep(3000);
-        try {
-            driver.switchTo().frame("mt-0e985ab86eaea08c");
-            List<WebElement> elementSliderBanner = driver.findElements(advSlider);
-            if (elementSliderBanner.size() > 0) {
-                elementSliderBanner.get(0).click();
-            }
-        } catch (NoSuchElementException e) {
-
-        }
-    }
+        Thread.sleep(4000);
+        if(driver.findElement(advSliderFrame).isDisplayed()){
+            driver.switchTo().frame("mt-f352938a75c64630");
+            driver.findElement(advSlider).click();
+        }}
 
     void acceptCookies() throws InterruptedException{
         Thread.sleep(2000);
