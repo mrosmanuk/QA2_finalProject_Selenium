@@ -69,7 +69,7 @@ public class Runner {
         orderpage.nextStep3();
 
         //compare name and price from product page with name and price from pre-purchase page
-        softAssert.assertEquals(product.getProductName(),orderpage.getNameBeforeCheckout());
+        softAssert.assertTrue(product.getProductName().equalsIgnoreCase(orderpage.getNameBeforeCheckout()));
         softAssert.assertEquals(product.getProductPrice(),orderpage.getPriceBeforeCheckout()[0]);
 
         //set user info from pre-purchase page into array
