@@ -9,8 +9,8 @@ class Homepage extends Common{
 
     private By fullScreenBanner = By.xpath("/html/body/div[1]/div/div/a");
     private By getFullScreenBannerFrame = By.xpath("//*[@id=\"mt-65cf2a318dbd5e21\"]");
-    private By advSlider = By.xpath("//div[@class='close-button-slider desktop']");// //*[@id="promo-bar"]/div/div[2]
-    private By advSliderFrame = By.xpath("//*[@id=\"mt-0e985ab86eaea08c\"]");
+    private By advSlider = By.xpath("//div[@class='close-button-slider desktop']");
+    private By advSliderFrame = By.xpath("//*[@id='mt-b832a55b5fb34368']");
     private By cookieButton = By.xpath("//a[@class='c-button-inverse']");// //*[@id="cookie-btns"]/a[1]
     private By phoneCategory = By.xpath("//a[contains(@href,'telefoni_plansetdatori')]");// //*[@id="sidebar"]/ul/li[1]/a
     private By xiaomi = By.xpath("//a[contains(@href,'xiaomi/opened')]");// //*[@id="main"]/div/div/div[2]/div/div[2]/table/tbody/tr[1]/td[1]/a
@@ -30,7 +30,7 @@ class Homepage extends Common{
             driver.findElement(fullScreenBanner).click();}
         else{
                 System.out.println("fullscreen frame not found");}}
-         catch(Exception e){}}
+         catch(Exception ignored){}}
 
     void closeBottomBanner() throws InterruptedException {
         Thread.sleep(4000);
@@ -40,7 +40,7 @@ class Homepage extends Common{
             driver.findElement(advSlider).click();}
         else{
                 System.out.println("bottom slider not found");}}
-        catch(Exception e){}}
+        catch(Exception ignored){}}
 
     void acceptCookies() throws InterruptedException{
         Thread.sleep(2000);
