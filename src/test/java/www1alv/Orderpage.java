@@ -20,6 +20,7 @@ class Orderpage extends Common {
     private By nextStep3 = By.xpath("//a[@class='ait-button ait-button-primary order-form-forward-button']"); // //*[@id="order_form"]/div[3]/a[2]
     private By nameBeforeCheckout = By.xpath("//div[@class='ait-cart-item-info']"); // //*[@id="main"]/div/div/form/section/table/tbody/tr[2]/td[2]/div/h4/a
     private By priceBeforeCheckout = By.xpath("//span[@class='ait-cart-total-count ait-cart-total-price']"); // //*[@id="shopping-cart-total-amount"]
+    private By byElements = By.xpath("//div[@class='col-1']");
 
     void nextStep1(){
         driver.findElement(nextStep1).click();
@@ -81,6 +82,6 @@ class Orderpage extends Common {
     }
 
     String[] getElements(){
-        return driver.findElement(By.xpath("//*[@id=\"main\"]/div/div/form/div[2]/div/div[1]")).getText().split("[^\\S]+");
+        return driver.findElement(byElements).getText().split("[^\\S]+");
     }
 }
