@@ -2,7 +2,6 @@ package www1alv;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 class Homepage extends Common{
@@ -16,7 +15,7 @@ class Homepage extends Common{
     private By xiaomi = By.xpath("//a[contains(@href,'xiaomi/opened')]");// //*[@id="main"]/div/div/div[2]/div/div[2]/table/tbody/tr[1]/td[1]/a
     private By sortBySelector = By.xpath("//a[@class='select-opener select-add-info']");// //*[@id="product_search_result_grid_container"]/div[3]/div/fieldset[1]/div/a
     private By sortByStars = By.xpath("//li[@rel='4']");
-    private By selectProduct = By.xpath("//img[contains(@alt,'Xiaomi Mi Band 2')]");// //*[@id="product_search_grid_container"]/div[4]/section[1]/div/div/div/div[2]/h3/a
+    private By selectProduct = By.xpath("//section[@class='product ']//img");// //*[@id="product_search_grid_container"]/div[4]/section[1]/div/div/div/div[2]/h3/a
 
     void startWebsite(){
         driver.get("https://www.1a.lv");
@@ -36,7 +35,7 @@ class Homepage extends Common{
         Thread.sleep(4000);
         try{
             if(driver.findElement(advSliderFrame).isDisplayed()){
-            driver.switchTo().frame("mt-0e985ab86eaea08c");
+            driver.switchTo().frame("mt-b832a55b5fb34368");
             driver.findElement(advSlider).click();}
         else{
                 System.out.println("bottom slider not found");}}
