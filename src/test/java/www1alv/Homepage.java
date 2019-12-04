@@ -10,12 +10,12 @@ class Homepage extends Common{
     private By getFullScreenBannerFrame = By.xpath("//*[@id=\"mt-65cf2a318dbd5e21\"]");
     private By advSlider = By.xpath("//div[@class='close-button-slider desktop']");
     private By advSliderFrame = By.xpath("//*[@id='mt-b832a55b5fb34368']");
-    private By cookieButton = By.xpath("//a[@class='c-button-inverse']");// //*[@id="cookie-btns"]/a[1]
-    private By phoneCategory = By.xpath("//a[contains(@href,'telefoni_plansetdatori')]");// //*[@id="sidebar"]/ul/li[1]/a
-    private By xiaomi = By.xpath("//a[contains(@href,'xiaomi/opened')]");// //*[@id="main"]/div/div/div[2]/div/div[2]/table/tbody/tr[1]/td[1]/a
-    private By sortBySelector = By.xpath("//a[@class='select-opener select-add-info']");// //*[@id="product_search_result_grid_container"]/div[3]/div/fieldset[1]/div/a
+    private By cookieButton = By.xpath("//a[@class='c-button-inverse']");
+    private By phoneCategory = By.xpath("//a[contains(@href,'telefoni_plansetdatori')]");
+    private By xiaomi = By.xpath("//a[contains(@href,'xiaomi/opened')]");
+    private By sortBySelector = By.xpath("//a[@class='select-opener select-add-info']");
     private By sortByStars = By.xpath("//li[@rel='4']");
-    private By selectProduct = By.xpath("//section[@class='product ']//img");// //*[@id="product_search_grid_container"]/div[4]/section[1]/div/div/div/div[2]/h3/a
+    private By selectProduct = By.xpath("//section[@class='product ']//img");
 
     void startWebsite(){
         driver.get("https://www.1a.lv");
