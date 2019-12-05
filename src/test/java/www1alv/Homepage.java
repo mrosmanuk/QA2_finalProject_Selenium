@@ -6,8 +6,8 @@ import org.openqa.selenium.WebElement;
 
 class Homepage extends Common{
 
-    private By fullScreenBanner = By.xpath("/html/body/div[1]/div/div/a");
-    private By getFullScreenBannerFrame = By.xpath("//*[@id=\"mt-65cf2a318dbd5e21\"]");
+    private By fullScreenBanner = By.xpath("//a[@class='close-button animated']");
+    private By getFullScreenBannerFrame = By.xpath("//*[@id='mt-65cf2a318dbd5e21']");
     private By advSlider = By.xpath("//div[@class='close-button-slider desktop']");
     private By advSliderFrame = By.xpath("//*[@id='mt-b832a55b5fb34368']");
     private By cookieButton = By.xpath("//a[@class='c-button-inverse']");
