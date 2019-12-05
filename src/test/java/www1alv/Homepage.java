@@ -9,7 +9,7 @@ class Homepage extends Common{
     private By fullScreenBanner = By.xpath("//a[@class='close-button animated']");
     private By getFullScreenBannerFrame = By.xpath("//*[@id='mt-65cf2a318dbd5e21']");
     private By advSlider = By.xpath("//div[@class='close-button-slider desktop']");
-    private By advSliderFrame = By.xpath("//*[@id='mt-b832a55b5fb34368']");
+    private By advSliderFrame = By.xpath("//*[@id='mt-d8736f517de4c467']");
     private By cookieButton = By.xpath("//a[@class='c-button-inverse']");
     private By phoneCategory = By.xpath("//a[contains(@href,'telefoni_plansetdatori')]");
     private By xiaomi = By.xpath("//a[contains(@href,'xiaomi/opened')]");
@@ -35,7 +35,7 @@ class Homepage extends Common{
         Thread.sleep(4000);
         try{
             if(driver.findElement(advSliderFrame).isDisplayed()){
-            driver.switchTo().frame("mt-b832a55b5fb34368");
+            driver.switchTo().frame("mt-d8736f517de4c467");
             driver.findElement(advSlider).click();}
         else{
                 System.out.println("bottom slider not found");}}
