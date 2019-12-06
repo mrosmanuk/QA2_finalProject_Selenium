@@ -9,7 +9,7 @@ class Orderpage extends Common {
     private By inputName = By.xpath("//input[@id='order_main_data_name']");
     private By inputUserLastName = By.xpath("//input[@id='order_main_data_surname']");
     private By inputEmail = By.xpath("//input[@id='order_main_data_email']");
-    private By inputPhoneNumber = By.xpath("//input[@id='order_main_data_contact_phone_number']");
+    private By inputPhoneNumber = By.xpath("//input[@id='order_main_data_contact_phone_number']"); //
     private By spamAgreementSelector = By.xpath("//span[@class='ui-button-icon-primary ui-icon ui-icon-triangle-1-s']");
     private By noSpamOption = By.xpath("//a[contains(.,'Nev')]|//a[contains(.,'Не хочу')]");
     private By acceptTerms = By.xpath("//input[@id='accept_purchase_agreement']");
