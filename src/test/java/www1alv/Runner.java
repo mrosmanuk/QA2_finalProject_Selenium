@@ -29,6 +29,7 @@ public class Runner {
         homepage.startWebsite();
         homepage.closeFullscreenBanner();
         homepage.closeBottomBanner();
+        homepage.closeBottomBanner2();
         homepage.acceptCookies();
     }
 
